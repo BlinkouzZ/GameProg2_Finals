@@ -323,8 +323,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -352.2, y: 171.39998}
-  m_SizeDelta: {x: 119.6207, y: 32.1134}
+  m_AnchoredPosition: {x: -352.2, y: 153.37782}
+  m_SizeDelta: {x: 119.6207, y: 68.1577}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8110778921425701398
 CanvasRenderer:
@@ -367,9 +367,14 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Shift - Sprint
+  m_Text: 'M1 - Stab
 
-    M1 - Attack
+    E - Interact
+
+    Shift - Sprint
+
+    Ctrl - Crouch
+
 
 '
 --- !u!1 &6885940312835525656
