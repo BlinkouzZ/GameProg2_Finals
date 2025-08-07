@@ -51,7 +51,7 @@ public class Interactable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((ObjectType == "Equippable" && gameObject.activeInHierarchy == true) || (ObjectType == "Switch" && SwitchActivated == false) && PlayerInRange == true)
+        if ((ObjectType == "Equippable" && this.gameObject.activeInHierarchy == true && PlayerInRange == true) || (ObjectType == "Switch" && SwitchActivated == false) && PlayerInRange == true)
         {
             text.gameObject.SetActive(true);
             if (Input.GetKey(KeyCode.E))
@@ -80,7 +80,7 @@ public class Interactable : MonoBehaviour
                         PlayerValues.WlkSPD += 2;
                         PlayerValues.RunSPD += 3;
                     }
-                    gameObject.SetActive(false);
+                    this.gameObject.SetActive(false);
                 }
             }
         }
