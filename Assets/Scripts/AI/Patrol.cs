@@ -20,6 +20,7 @@ public class Patrol : MonoBehaviour
     public Material hostile; //red
 
     public bool isAIHostile = false;
+    public bool Stunned = false;
 
     public GameObject player;
     public GameObject sword;
@@ -50,7 +51,7 @@ public class Patrol : MonoBehaviour
 
     private void Update()
     {
-        if (aiManager.isAiAwake)
+        if (aiManager.isAiAwake && Stunned == false)
         {
             if (!navMeshAgent.pathPending && navMeshAgent.remainingDistance < distance && !isAIHostile)
             {
@@ -60,7 +61,7 @@ public class Patrol : MonoBehaviour
             }
         }
 
-        if (aiManager.isAiAwake)
+        if (aiManager.isAiAwake && Stunned == false)
         {
             if (!navMeshAgent.pathPending && navMeshAgent.remainingDistance < distance && !isAIHostile)
             {
@@ -84,12 +85,29 @@ public class Patrol : MonoBehaviour
         
     }
 
+    private void RemoveStun()
+    {
+        Stunned = false;
+    }
+
+    public void OnCollisionEnter(Collision collision)
+    {
+       
+        if (collision.gameObject.CompareTag("Dagger"))
+        {
+            
+            Stunned = true;
+            Invoke("RemoveStun", player.GetComponent<PlayerMovement>().StabStunAmount);
+        }
+    }
+
     public void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.CompareTag("Player"))
         {
             isAIHostile = true;
         }
+       
     }
 
     public void OnTriggerExit(Collider other)

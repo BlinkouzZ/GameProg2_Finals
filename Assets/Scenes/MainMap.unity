@@ -730,6 +730,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 73424282}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &85208735 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5971060202587610125, guid: 00c9431165b4c994e9bf34eb28f0181b, type: 3}
+  m_PrefabInstance: {fileID: 1084937126}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &93360796
 GameObject:
   m_ObjectHideFlags: 0
@@ -1196,6 +1201,7 @@ GameObject:
   - component: {fileID: 179867019}
   - component: {fileID: 179867018}
   - component: {fileID: 179867017}
+  - component: {fileID: 179867023}
   m_Layer: 0
   m_Name: EnemyArea2
   m_TagString: AI
@@ -1278,6 +1284,7 @@ MonoBehaviour:
   alert: {fileID: 2100000, guid: 48b63da96ab4c4c41822ee104dccc708, type: 2}
   hostile: {fileID: 2100000, guid: 52b652e5f9b0a3440ac6daf3fa2d7cd4, type: 2}
   isAIHostile: 0
+  Stunned: 0
   player: {fileID: 223655022}
   sword: {fileID: 1073441195}
   aiLevel: 0
@@ -1376,6 +1383,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 179867015}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &179867023
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179867015}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &181296483
 GameObject:
   m_ObjectHideFlags: 0
@@ -1677,6 +1711,11 @@ MeshFilter:
 --- !u!1 &223655022 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5273428762684383979, guid: 00c9431165b4c994e9bf34eb28f0181b, type: 3}
+  m_PrefabInstance: {fileID: 1084937126}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &223655023 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7677568531230545449, guid: 00c9431165b4c994e9bf34eb28f0181b, type: 3}
   m_PrefabInstance: {fileID: 1084937126}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &230036086
@@ -4760,6 +4799,7 @@ GameObject:
   - component: {fileID: 511493020}
   - component: {fileID: 511493019}
   - component: {fileID: 511493018}
+  - component: {fileID: 511493025}
   m_Layer: 0
   m_Name: EnemyArea1
   m_TagString: AI
@@ -4821,6 +4861,7 @@ MonoBehaviour:
   alert: {fileID: 2100000, guid: 48b63da96ab4c4c41822ee104dccc708, type: 2}
   hostile: {fileID: 2100000, guid: 52b652e5f9b0a3440ac6daf3fa2d7cd4, type: 2}
   isAIHostile: 0
+  Stunned: 0
   player: {fileID: 223655022}
   sword: {fileID: 1073441195}
   aiLevel: 0
@@ -4934,6 +4975,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 828839246}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &511493025
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511493017}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &518540199
 GameObject:
   m_ObjectHideFlags: 0
@@ -7321,6 +7389,7 @@ GameObject:
   - component: {fileID: 741885523}
   - component: {fileID: 741885522}
   - component: {fileID: 741885521}
+  - component: {fileID: 741885527}
   m_Layer: 0
   m_Name: EnemyArea3
   m_TagString: AI
@@ -7395,6 +7464,7 @@ MonoBehaviour:
   alert: {fileID: 2100000, guid: 48b63da96ab4c4c41822ee104dccc708, type: 2}
   hostile: {fileID: 2100000, guid: 52b652e5f9b0a3440ac6daf3fa2d7cd4, type: 2}
   isAIHostile: 0
+  Stunned: 0
   player: {fileID: 223655022}
   sword: {fileID: 1073441195}
   aiLevel: 0
@@ -7493,6 +7563,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 741885519}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &741885527
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 741885519}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &742980771
 GameObject:
   m_ObjectHideFlags: 0
@@ -8103,6 +8200,7 @@ GameObject:
   - component: {fileID: 767657144}
   - component: {fileID: 767657143}
   - component: {fileID: 767657142}
+  - component: {fileID: 767657148}
   m_Layer: 0
   m_Name: EnemyArea2(2)
   m_TagString: AI
@@ -8173,6 +8271,7 @@ MonoBehaviour:
   alert: {fileID: 2100000, guid: 48b63da96ab4c4c41822ee104dccc708, type: 2}
   hostile: {fileID: 2100000, guid: 52b652e5f9b0a3440ac6daf3fa2d7cd4, type: 2}
   isAIHostile: 0
+  Stunned: 0
   player: {fileID: 223655022}
   sword: {fileID: 1073441195}
   aiLevel: 0
@@ -8271,6 +8370,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 767657140}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &767657148
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 767657140}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &774326600
 GameObject:
   m_ObjectHideFlags: 0
@@ -11976,6 +12102,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1061894641}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1064160941 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2853883402630696608, guid: 3e20f991a75c4474b86d92e4b9b016c7, type: 3}
+  m_PrefabInstance: {fileID: 1134782037}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1073441195 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7328605986489837571, guid: 00c9431165b4c994e9bf34eb28f0181b, type: 3}
@@ -12094,9 +12225,49 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1008834018678899857, guid: 00c9431165b4c994e9bf34eb28f0181b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1008834018678899857, guid: 00c9431165b4c994e9bf34eb28f0181b, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3855881680481375327, guid: 00c9431165b4c994e9bf34eb28f0181b, type: 3}
+      propertyPath: UI
+      value: 
+      objectReference: {fileID: 1064160941}
+    - target: {fileID: 3855881680481375327, guid: 00c9431165b4c994e9bf34eb28f0181b, type: 3}
+      propertyPath: DaggerModel
+      value: 
+      objectReference: {fileID: 1073441195}
+    - target: {fileID: 3855881680481375327, guid: 00c9431165b4c994e9bf34eb28f0181b, type: 3}
+      propertyPath: levelToLoad
+      value: MainMap
+      objectReference: {fileID: 0}
+    - target: {fileID: 3855881680481375327, guid: 00c9431165b4c994e9bf34eb28f0181b, type: 3}
+      propertyPath: PlayerValues
+      value: 
+      objectReference: {fileID: 11400000, guid: 61d264c0619bf75469a31db1ee82f7d8, type: 2}
+    - target: {fileID: 3855881680481375327, guid: 00c9431165b4c994e9bf34eb28f0181b, type: 3}
+      propertyPath: sliderHealth
+      value: 
+      objectReference: {fileID: 1201923930}
+    - target: {fileID: 3855881680481375327, guid: 00c9431165b4c994e9bf34eb28f0181b, type: 3}
+      propertyPath: PlayerAnimator
+      value: 
+      objectReference: {fileID: 223655023}
+    - target: {fileID: 3855881680481375327, guid: 00c9431165b4c994e9bf34eb28f0181b, type: 3}
+      propertyPath: DaggerCollision
+      value: 
+      objectReference: {fileID: 85208735}
+    - target: {fileID: 3855881680481375327, guid: 00c9431165b4c994e9bf34eb28f0181b, type: 3}
+      propertyPath: _PlayerAttackClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 7f3a6c42b603c674d85cec6ac273edc1, type: 3}
     - target: {fileID: 4686077878187913274, guid: 00c9431165b4c994e9bf34eb28f0181b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.88
+      value: 11.763
       objectReference: {fileID: 0}
     - target: {fileID: 4686077878187913274, guid: 00c9431165b4c994e9bf34eb28f0181b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12104,7 +12275,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4686077878187913274, guid: 00c9431165b4c994e9bf34eb28f0181b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -61.141
+      value: -62.345
       objectReference: {fileID: 0}
     - target: {fileID: 4686077878187913274, guid: 00c9431165b4c994e9bf34eb28f0181b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -12137,6 +12308,14 @@ PrefabInstance:
     - target: {fileID: 5273428762684383979, guid: 00c9431165b4c994e9bf34eb28f0181b, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7677568531230545449, guid: 00c9431165b4c994e9bf34eb28f0181b, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 034c27a85d472634780c4a4e2cb3f733, type: 2}
+    - target: {fileID: 8083863661475633564, guid: 00c9431165b4c994e9bf34eb28f0181b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13214,6 +13393,7 @@ GameObject:
   - component: {fileID: 1174179969}
   - component: {fileID: 1174179968}
   - component: {fileID: 1174179967}
+  - component: {fileID: 1174179973}
   m_Layer: 0
   m_Name: EnemyArea2(1)
   m_TagString: AI
@@ -13284,6 +13464,7 @@ MonoBehaviour:
   alert: {fileID: 2100000, guid: 48b63da96ab4c4c41822ee104dccc708, type: 2}
   hostile: {fileID: 2100000, guid: 52b652e5f9b0a3440ac6daf3fa2d7cd4, type: 2}
   isAIHostile: 0
+  Stunned: 0
   player: {fileID: 223655022}
   sword: {fileID: 1073441195}
   aiLevel: 0
@@ -13382,6 +13563,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1174179965}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1174179973
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174179965}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1177629030
 GameObject:
   m_ObjectHideFlags: 0
@@ -13927,6 +14135,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1197834523}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1201923930 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7864909677714800222, guid: 3e20f991a75c4474b86d92e4b9b016c7, type: 3}
+  m_PrefabInstance: {fileID: 1134782037}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1217046777
 GameObject:
   m_ObjectHideFlags: 0
@@ -18378,6 +18597,7 @@ GameObject:
   - component: {fileID: 1752199715}
   - component: {fileID: 1752199714}
   - component: {fileID: 1752199713}
+  - component: {fileID: 1752199719}
   m_Layer: 0
   m_Name: EnemyArea2(3)
   m_TagString: AI
@@ -18444,6 +18664,7 @@ MonoBehaviour:
   alert: {fileID: 2100000, guid: 48b63da96ab4c4c41822ee104dccc708, type: 2}
   hostile: {fileID: 2100000, guid: 52b652e5f9b0a3440ac6daf3fa2d7cd4, type: 2}
   isAIHostile: 0
+  Stunned: 0
   player: {fileID: 223655022}
   sword: {fileID: 1073441195}
   aiLevel: 0
@@ -18542,6 +18763,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1752199711}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1752199719
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1752199711}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1767876794
 GameObject:
   m_ObjectHideFlags: 0
@@ -19121,6 +19369,7 @@ GameObject:
   - component: {fileID: 1848824866}
   - component: {fileID: 1848824865}
   - component: {fileID: 1848824864}
+  - component: {fileID: 1848824870}
   m_Layer: 0
   m_Name: EnemyArea2(4)
   m_TagString: AI
@@ -19187,6 +19436,7 @@ MonoBehaviour:
   alert: {fileID: 2100000, guid: 48b63da96ab4c4c41822ee104dccc708, type: 2}
   hostile: {fileID: 2100000, guid: 52b652e5f9b0a3440ac6daf3fa2d7cd4, type: 2}
   isAIHostile: 0
+  Stunned: 0
   player: {fileID: 223655022}
   sword: {fileID: 1073441195}
   aiLevel: 0
@@ -19285,6 +19535,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1848824862}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1848824870
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1848824862}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1849242158
 GameObject:
   m_ObjectHideFlags: 0
