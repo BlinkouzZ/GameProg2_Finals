@@ -8,26 +8,12 @@ public class UnlockExit : MonoBehaviour
     // Start is called before the first frame update
     public string levelToLoad;
     public bool EndGameInstead = false; //If true, closes the game
-    [Header("Enemies Required")]
-    public GameObject enemy1;
-    public GameObject enemy2;
-    public GameObject enemy3;
-    public GameObject enemy4;
-    public GameObject enemy5;
-    public GameObject enemy6;
-    public GameObject enemy7;
-    public GameObject enemy8;
-    public GameObject enemy9;
-    public GameObject enemy10;
-    public GameObject enemy11;
-    public GameObject enemy12;
-    public GameObject enemy13;
-    public GameObject enemy14;
-    public GameObject enemy15;
-    public GameObject enemy16;
-    public GameObject enemy17;
+    [Header("Switches Required")]
+    public GameObject Switch1;
+    public GameObject Switch2;
+    public GameObject Switch3;
+    public GameObject Switch4;
     [Header("Door Customization")]
-    public Material GetMaterial;
     public GameObject Door;
     public bool activated = false;
     public AudioSource AudioSource;
@@ -44,6 +30,7 @@ public class UnlockExit : MonoBehaviour
 
         if (collision.gameObject.tag == "Player" && activated == true)
         {
+            Debug.Log("Game closes but only in built mode!");
             if (EndGameInstead == true)
             {
                 Debug.Log("Game closes but only in built mode!");
@@ -60,11 +47,12 @@ public class UnlockExit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (activated == false && !enemy1 && !enemy2 && !enemy3 && !enemy4  && !enemy5 && !enemy6 && !enemy7 && !enemy8 && !enemy9 && !enemy10 && !enemy11 && !enemy12 && !enemy13 && !enemy14 && !enemy15 && !enemy16 && !enemy17)
+        if (activated == false && Switch1.GetComponent<Interactable>().SwitchActivated == true && Switch2.GetComponent<Interactable>().SwitchActivated == true && Switch3.GetComponent<Interactable>().SwitchActivated == true && Switch4.GetComponent<Interactable>().SwitchActivated == true)
         {
             AudioSource.PlayOneShot(_OpenDoor);
-            Door.GetComponent<MeshRenderer>().material = GetMaterial;
+            Door.GetComponent<MeshRenderer>().enabled = false;
             activated = true;
+            gameObject.GetComponent<BoxCollider>().isTrigger = true;
         }
     }
 }
